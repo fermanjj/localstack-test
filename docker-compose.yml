@@ -20,6 +20,7 @@ services:
       - LAMBDA_REMOVE_CONTAINERS=true
       - LOCALSTACK_API_KEY=${LOCALSTACK_API_KEY- }  # only required for Pro
       - DOCKER_HOST=unix:///var/run/docker.sock
+      - PROVIDER_OVERRIDE_LAMBDA=v2
     volumes:
       - "${TMPDIR:-/tmp}/localstack:/var/lib/localstack"
       - "/var/run/docker.sock:/var/run/docker.sock"
